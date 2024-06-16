@@ -1,0 +1,14 @@
+.optionPanel {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+
+  &:nth-child(2) {
+    padding-left: 20px;
+  }
+}

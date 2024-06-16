@@ -1,0 +1,25 @@
+.wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  background-color: var(--primary-color);
+}
+
+.todoList {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+

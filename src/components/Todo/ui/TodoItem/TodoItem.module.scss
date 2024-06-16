@@ -1,0 +1,59 @@
+.todo {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 15px;
+  background-color: var(--primary-color);
+  border-radius: 6px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+
+  &:after {
+    content: " ";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+  }
+}
+
+.leftBlock {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 15px;
+}
+
+.rightBlock {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  .name {
+    font: var(--font-m);
+  }
+
+  .description {
+    font: var(--font-s);
+  }
+
+}
+
+.checked {
+  color:grey;
+  text-decoration: line-through;
+}
+
+
+

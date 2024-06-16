@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.modalTitle {
+  margin-bottom: 30px;
+  font: var(--font-xl);
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 10px;
+}

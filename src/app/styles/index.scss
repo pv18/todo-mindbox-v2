@@ -1,0 +1,14 @@
+@import "reset";
+@import "variables/global";
+
+.app {
+    font: var(--font-m);
+    background: var(--secondary-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+
