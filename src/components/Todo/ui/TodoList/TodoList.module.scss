@@ -1,12 +1,13 @@
 .wrapper {
-  max-width: 1000px;
-  width: 100%;
-  margin: 20px;
+  margin: 15px;
   padding: 40px;
+  height: auto;
+  min-height: var(--todos-min-height);
+  width: 100%;
+  max-width: var(--todos-max-width);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
   background-color: var(--primary-color);
 }
 
@@ -16,10 +17,14 @@
   flex-direction: column;
 }
 
-.row {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.title {
+  margin-bottom: 20px;
+  font: var(--font-l);
+  text-transform: uppercase;
+}
+
+.divider {
+  background-color: var(--accent-color);
+  margin: 10px;
 }
 

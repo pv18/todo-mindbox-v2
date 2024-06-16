@@ -5,6 +5,7 @@ import './styles/index.scss';
 function App() {
     return (
         <div className='app'>
+            <h1 className='title'>Костыли для моей памяти.</h1>
             <TodoProvider>
                 <TodoList />
             </TodoProvider>

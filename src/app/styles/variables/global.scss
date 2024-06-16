@@ -1,13 +1,14 @@
 :root {
+    // Цвета
     --text-color: #141C1F;
     --primary-color: #FFF;
     --secondary-color: #F0F2F5;
-    --accent-color: #718589;
-    --font-family-main: 'Roboto', sans-serif;
+    --accent-color: #4E8EE4;
 
-    // todos
-    --todos-max-width:800px;
-    --todos-top-padding:50px;
+    --bg-gradient:linear-gradient(3deg, rgba(131,204,255,1) 0%, rgb(78, 142, 228) 50%);
+
+    // Шрифт
+    --font-family-main: 'Roboto', sans-serif;
 
     // s
     --font-size-s: 12px;
@@ -28,4 +29,8 @@
     --font-size-xl: 32px;
     --font-line-xl: 40px;
     --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
+    // Размеры
+    --todos-max-width: 1000px;
+    --todos-min-height: 400px;
 }

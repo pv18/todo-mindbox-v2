@@ -8,11 +8,13 @@ export type Todo = {
     completed: boolean;
 };
 
+// Тип названия фильтра
 export type TodoFilterNameType =
     | TodoFilterNameTypes.ALL
     | TodoFilterNameTypes.COMPLETED
     | TodoFilterNameTypes.ACTIVE;
 
+// Тип значения фильтра
 export type TodoFilterType =
     | TodoFilterValueTypes.ALL
     | TodoFilterValueTypes.COMPLETED

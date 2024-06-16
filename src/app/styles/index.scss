@@ -3,12 +3,22 @@
 
 .app {
     font: var(--font-m);
-    background: var(--secondary-color);
+    background-color: var(--accent-color);
+    background-image: var(--bg-gradient);
     color: var(--text-color);
     min-height: 100vh;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        margin: 20px 0;
+        font: var(--font-xl);
+        text-transform: uppercase;
+        color: var(--secondary-color);
+    }
 }
+
 
 
