@@ -1,0 +1,21 @@
+.todoCounter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font: var(--font-m);
+
+    &:after {
+      content: " ";
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--positive-color);
+    }
+
+    &:nth-child(2):after {
+      background-color: var(--negative-color);
+    }
+}

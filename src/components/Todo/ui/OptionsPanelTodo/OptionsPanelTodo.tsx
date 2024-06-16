@@ -1,4 +1,4 @@
-import { ActiveTaskCounter } from '../ActiveTaskCounter';
+import { TodoCounters } from '../TodoCounters';
 import { AddTodoButton } from '../AddTodoButton';
 import { RemoveAllCompletedTodoButton } from '../RemoveAllCompletedTodoButton';
 import { TodoFilter } from '../TodoFilter';
@@ -12,7 +12,7 @@ export const OptionsPanelTodo = () => {
                 <RemoveAllCompletedTodoButton />
             </div>
             <div className={cls.row}>
-                <ActiveTaskCounter />
+                <TodoCounters />
                 <TodoFilter />
             </div>
         </div>

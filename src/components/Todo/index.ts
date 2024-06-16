@@ -1,4 +1,4 @@
-export { ActiveTaskCounter } from './ui/ActiveTaskCounter';
+export { TodoCounters } from './ui/TodoCounters';
 export { AddTodoButton } from './ui/AddTodoButton';
 export { ChangeTodoButton } from './ui/ChangeTodoButton';
 export { OptionsPanelTodo } from './ui/OptionsPanelTodo';

@@ -4,11 +4,13 @@
     --primary-color: #FFF;
     --secondary-color: #F0F2F5;
     --accent-color: #4E8EE4;
+    --positive-color: #00FF66;
+    --negative-color: #ff4d4f;
 
-    --bg-gradient:linear-gradient(3deg, rgba(131,204,255,1) 0%, rgb(78, 142, 228) 50%);
+    --bg-gradient:linear-gradient( 135deg, #3C8CE7 10%, #00EAFF 100%);
 
     // Шрифт
-    --font-family-main: 'Roboto', sans-serif;
+    --font-family-main: "Exo 2", sans-serif;
 
     // s
     --font-size-s: 12px;
