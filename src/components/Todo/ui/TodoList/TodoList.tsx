@@ -4,8 +4,8 @@ import { useTodoContext } from 'context/TodoContext';
 import { TodoItem } from '../TodoItem';
 import { OptionsPanelTodo } from '../OptionsPanelTodo';
 import { Todo } from '../../model/types/todoTypes';
+import { Divider } from 'antd';
 import cls from './TodoList.module.scss';
-import {Divider} from 'antd';
 
 export const TodoList = () => {
     const {
@@ -27,7 +27,7 @@ export const TodoList = () => {
         <div className={cls.wrapper}>
             <h2 className={cls.title}>Список дел</h2>
             <OptionsPanelTodo />
-            <Divider rootClassName={cls.divider}/>
+            <Divider rootClassName={cls.divider} />
             <ul className={cls.todoList}>
                 {filteredTasks.map((todo) => (
                     <TodoItem key={todo.id} {...todo} />

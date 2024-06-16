@@ -25,35 +25,19 @@
 }
 
 .leftBlock {
+  width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   column-gap: 15px;
 }
 
-.rightBlock {
+.actionButtons {
   display: flex;
   align-items: flex-start;
   column-gap: 10px;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
 
-  .name {
-    font: var(--font-m);
-  }
-
-  .description {
-    font: var(--font-s);
-  }
-
-}
-
-.checked {
-  color:grey;
-  text-decoration: line-through;
-}
 
 
 

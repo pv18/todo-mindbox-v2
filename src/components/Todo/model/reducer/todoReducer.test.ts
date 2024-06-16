@@ -3,30 +3,10 @@ import { todoReducer } from './todoReducer';
 
 const data: TodoState = {
     todos: [
-        {
-            id: '1',
-            name: 'First Todo',
-            description: 'description',
-            completed: false,
-        },
-        {
-            id: '2',
-            name: 'Second Todo',
-            description: 'description',
-            completed: true,
-        },
-        {
-            id: '3',
-            name: 'Third Todo',
-            description: undefined,
-            completed: false,
-        },
-        {
-            id: '4',
-            name: 'Fourth Todo',
-            description: 'description',
-            completed: true,
-        },
+        { id: '1', name: 'First Todo', completed: false },
+        { id: '2', name: 'Second Todo', completed: true },
+        { id: '3', name: 'Third Todo', completed: false },
+        { id: '4', name: 'Fourth Todo', completed: true },
     ],
     filter: 'all' as TodoFilterType,
 };
@@ -38,7 +18,6 @@ describe('todoReducer.test', () => {
         const newTodo: Todo = {
             id: '5',
             name: 'New Todo',
-            description: 'description',
             completed: false,
         };
 
@@ -48,7 +27,6 @@ describe('todoReducer.test', () => {
         expect(endState.todos.length).toBe(5);
         expect(endState.todos[4].id).toBeDefined();
         expect(endState.todos[4].name).toBe('New Todo');
-        expect(endState.todos[4].description).toBe('description');
         expect(endState.todos[4].completed).toBe(false);
     });
 
@@ -80,18 +58,15 @@ describe('todoReducer.test', () => {
     test('name and description todo should be changed', () => {
         const startState = data;
         const name = 'New Todo';
-        const description = 'description';
 
         const action: Action = {
             type: 'CHANGE_TODO',
             id: '2',
             name,
-            description,
         };
         const endState = todoReducer(startState, action);
 
         expect(endState.todos[1].name).toBe(name);
-        expect(endState.todos[1].description).toBe(description);
     });
 
     // Удалить все завершенные дела

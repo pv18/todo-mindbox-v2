@@ -1,5 +1,5 @@
-import {FC, memo} from 'react';
-import { Button, Popconfirm, Tooltip } from 'antd';
+import { FC, memo } from 'react';
+import { Button, Popconfirm } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
 
 interface RemoveTodoButtonProps {
@@ -7,7 +7,7 @@ interface RemoveTodoButtonProps {
     disabled: boolean;
 }
 
-export const RemoveTodoButton: FC<RemoveTodoButtonProps> = memo( (props) => {
+export const RemoveTodoButton: FC<RemoveTodoButtonProps> = memo((props) => {
     const { disabled, deleteTask } = props;
 
     return (
@@ -19,14 +19,12 @@ export const RemoveTodoButton: FC<RemoveTodoButtonProps> = memo( (props) => {
             okText='Да'
             cancelText='Нет'
         >
-            <Tooltip title={!disabled && `Удалить задачу`}>
-                <Button
-                    type='primary'
-                    icon={<DeleteOutlined />}
-                    danger
-                    disabled={disabled}
-                />
-            </Tooltip>
+            <Button
+                type='primary'
+                icon={<DeleteOutlined />}
+                danger
+                disabled={disabled}
+            />
         </Popconfirm>
     );
-})
+});

@@ -23,11 +23,7 @@ export const todoReducer = (state: TodoState, action: Action): TodoState => {
                 ...state,
                 todos: state.todos.map((todo) =>
                     todo.id === action.id
-                        ? {
-                              ...todo,
-                              name: action.name,
-                              description: action.description,
-                          }
+                        ? { ...todo, name: action.name }
                         : todo
                 ),
             };

@@ -1,73 +1,54 @@
-import { useState } from 'react';
-import { Button, Form, FormProps, Modal } from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
-import { TodoForm } from '../TodoForm';
+import { useState, KeyboardEvent } from 'react';
+import { Button, Input, Space } from 'antd';
 import { useTodoContext } from 'context/TodoContext';
-import { Todo, TodoFormFieldType } from 'components';
 import { generateUniqueId } from 'helpers';
+import { Todo } from '../../model/types/todoTypes';
 import cls from './AddTodoButton.module.scss';
 
 export const AddTodoButton = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
     const { dispatch } = useTodoContext();
-    const [form] = Form.useForm();
-    const taskName = Form.useWatch('name', form);
+    const [input, setInput] = useState<string>('');
 
-    const showModal = () => {
-        setIsModalOpen(true);
+    const onAddTodo = () => {
+        if (input.trim().length) {
+            const id = generateUniqueId();
+
+            const newTodo: Todo = {
+                id,
+                name: input,
+                completed: false,
+            };
+
+            dispatch({ type: 'ADD_TODO', todo: newTodo });
+            setInput('');
+        }
     };
 
-    const handleCancel = () => {
-        form.resetFields();
-        setIsModalOpen(false);
-    };
-
-    const onSubmit: FormProps<TodoFormFieldType>['onFinish'] = (data) => {
-        const { name, description } = data;
-        const id = generateUniqueId();
-
-        const newTodo: Todo = {
-            id,
-            name,
-            description,
-            completed: false,
-        };
-
-        dispatch({ type: 'ADD_TODO', todo: newTodo });
-        handleCancel();
+    const onKeyDownHandler = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            onAddTodo();
+        }
     };
 
     return (
-        <>
-            <div className={cls.wrapper}>
+        <div className={cls.wrapper}>
+            <Space.Compact>
+                <Input
+                    className={cls.input}
+                    value={input}
+                    onChange={(e) => setInput(e.currentTarget.value)}
+                    onKeyDown={onKeyDownHandler}
+                    placeholder={'Добавить задачу'}
+                    allowClear
+                />
                 <Button
                     type='primary'
-                    shape='circle'
-                    icon={<PlusOutlined />}
-                    onClick={showModal}
-                />
-                <p>Добавить задачу</p>
-            </div>
-            <Modal
-                title={<h3 className={cls.modalTitle}>Добавить задачу</h3>}
-                open={isModalOpen}
-                onCancel={handleCancel}
-                maskClosable={false}
-                footer={
-                    <div className={cls.actionButtons}>
-                        <Button onClick={handleCancel}>Отмена</Button>
-                        <Button
-                            type={'primary'}
-                            onClick={form.submit}
-                            disabled={!taskName}
-                        >
-                            Добавить Задачу
-                        </Button>
-                    </div>
-                }
-            >
-                <TodoForm form={form} submitForm={onSubmit} />
-            </Modal>
-        </>
+                    onClick={onAddTodo}
+                    disabled={!input.length}
+                >
+                    Добавить
+                </Button>
+            </Space.Compact>
+        </div>
     );
 };

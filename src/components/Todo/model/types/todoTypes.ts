@@ -4,7 +4,6 @@ import { TodoFilterNameTypes, TodoFilterValueTypes } from 'enums';
 export type Todo = {
     id: string;
     name: string;
-    description?: string;
     completed: boolean;
 };
 
@@ -31,12 +30,6 @@ export type Action =
     | { type: 'ADD_TODO'; todo: Todo }
     | { type: 'TOGGLE_TODO'; id: string }
     | { type: 'DELETE_TODO'; id: string }
-    | { type: 'CHANGE_TODO'; id: string; name: string; description?: string }
+    | { type: 'CHANGE_TODO'; id: string; name: string }
     | { type: 'CHANGE_FILTER'; newFilter: TodoFilterType }
     | { type: 'CLEAR_COMPLETED' };
-
-// Форма создания нового дела
-export type TodoFormFieldType = {
-    name: string;
-    description?: string;
-};

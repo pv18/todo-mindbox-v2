@@ -7,5 +7,6 @@ export { RemoveTodoButton } from './ui/RemoveTodoButton';
 export { TodoFilter } from './ui/TodoFilter';
 export { TodoItem } from './ui/TodoItem';
 export { TodoList } from './ui/TodoList';
+export { EditableField } from './ui/EditableField';
 export { todoReducer } from './model/reducer/todoReducer';
 export * from './model/types/todoTypes';
