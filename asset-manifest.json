@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/todo-mindbox-v2/static/css/main.069bb843.css",
-    "main.js": "/todo-mindbox-v2/static/js/main.5c7d2c16.js",
+    "main.css": "/todo-mindbox-v2/static/css/main.531f795a.css",
+    "main.js": "/todo-mindbox-v2/static/js/main.44760dc7.js",
     "index.html": "/todo-mindbox-v2/index.html",
-    "main.069bb843.css.map": "/todo-mindbox-v2/static/css/main.069bb843.css.map",
-    "main.5c7d2c16.js.map": "/todo-mindbox-v2/static/js/main.5c7d2c16.js.map"
+    "main.531f795a.css.map": "/todo-mindbox-v2/static/css/main.531f795a.css.map",
+    "main.44760dc7.js.map": "/todo-mindbox-v2/static/js/main.44760dc7.js.map"
   },
   "entrypoints": [
-    "static/css/main.069bb843.css",
-    "static/js/main.5c7d2c16.js"
+    "static/css/main.531f795a.css",
+    "static/js/main.44760dc7.js"
   ]
 }
