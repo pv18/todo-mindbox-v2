@@ -1,14 +1,14 @@
-import React, {FC, memo} from 'react';
+import React, { FC, memo } from 'react';
 import cls from './TodoCounter.module.scss';
 
 interface TodoCounterProps {
-    count:number
-    title:string
-    empty:string
+    count: number;
+    title: string;
+    empty: string;
 }
 
-export const TodoCounter:FC<TodoCounterProps> = memo( (props) => {
-    const {count,title,empty} = props
+export const TodoCounter: FC<TodoCounterProps> = memo((props) => {
+    const { count, title, empty } = props;
 
     return (
         <>
@@ -24,5 +24,4 @@ export const TodoCounter:FC<TodoCounterProps> = memo( (props) => {
             )}
         </>
     );
-})
-
+});

@@ -31,7 +31,7 @@ export const AddTodoButton = () => {
     };
 
     return (
-        <div className={cls.wrapper}>
+        <div className={cls.addTodoButton}>
             <Space.Compact>
                 <Input
                     className={cls.input}

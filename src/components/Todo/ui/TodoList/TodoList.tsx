@@ -12,7 +12,7 @@ export const TodoList = () => {
         state: { todos, filter },
     } = useTodoContext();
 
-    const filteredTasks: Todo[] = useMemo(() => {
+    const filteredTodos: Todo[] = useMemo(() => {
         switch (filter) {
             case TodoFilterValueTypes.ACTIVE:
                 return todos.filter((todo) => !todo.completed);
@@ -29,7 +29,7 @@ export const TodoList = () => {
             <OptionsPanelTodo />
             <Divider rootClassName={cls.divider} />
             <ul className={cls.todoList}>
-                {filteredTasks.map((todo) => (
+                {filteredTodos.map((todo) => (
                     <TodoItem key={todo.id} {...todo} />
                 ))}
             </ul>
